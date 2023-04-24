@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/fonts/style.css" />
+    <script src="index.js" defer></script>
+    <title>Wallet</title>
+  </head>
+  <body>
+    <div class="main">
+      <header class="flex">
+        <a href="index.html"><h1>My Wallet</h1></a>
+        <i class="icon-menu"></i>
+      </header>
+      <nav id="nav">
+        <div id="add-new-card"><p>Adicionar novo cartão</p></div>
+        <div id="my-cards"><p>Meus cartões</p></div>
+        <div id="remove-card"><p>Remover cartão</p></div>
+      </nav>
+      <div class="cards"></div>
+      <form>
+        <section id="credit-card">
+          <div class="front"></div>
+          <div class="back"></div>
+        </section>
+        <section class="inputs flex">
+          <div class="input-wrapper">
+            <label for="cc-number">Número do cartão</label>
+            <input
+              id="cc-number"
+              type="text"
+              placeholder="**** **** **** ****"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="cc-holder">Nome do titular</label>
+            <input
+              id="cc-holder"
+              type="text"
+              placeholder="Nome como está escirto no cartão"
+              required
+            />
+            <div class="warning">
+              <img src="./assets/warning.svg" alt="Ícone de alerta" />
+              Nome do titular é obrigatório
+            </div>
+          </div>
+          <div class="col-2 flex">
+            <div class="input-wrapper">
+              <label for="cc-validity">Validade</label>
+              <input id="cc-validity" type="text" placeholder="MM/AA" />
+            </div>
+            <div class="input-wrapper">
+              <label class="flex help" for="cc-cvv"
+                >CVV
+                <img
+                  src="./assets/Question.png"
+                  alt="Ícone de ajuda"
+                  title="Esse número está geralmente nas costas do seu cartão."
+                />
+              </label>
+              <input id="cc-cvv" type="text" placeholder="***" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="cc-name">Apelido do cartão</label>
+            <input id="cc-name" type="text" placeholder="(opcional)" />
+          </div>
+        </section>
+        <section class="info-security flex">
+          <img src="./assets/check.svg" alt="Ícone de segurança" />
+          Seus dados estão seguros
+        </section>
+        <button id="add-card">Adicionar cartão</button>
+      </form>
+      <footer>
+        <p>Desenvolvido por Gabriel de Albuquerque - &copy;Rocketseat</p>
+        <p>Todos os direitos reservados.</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+  </body>
+</html>
